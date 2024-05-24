@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* || RESET  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* || GENERAL STYLES */
+
+body {
+    font-family: Inter, sans-serif;
+    min-height: 100svh;
+}
+
+header, main, section {
+    padding: 16px;
+}
+
+/* || NAVIGATION BAR */
+
+header {
+    padding-top: 28px;
+}
+
+.menubar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menubar div img {
+    min-width: 45px;
+}
+
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 40px;
+}
+
+.burger-icon div {
+    width: 40px;
+    height: 3px;
+    background-color: #00001A;
+    margin-bottom: 4px;
+}
+
+.menubar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.menubar ul li a {
+    color: #5E607A;   
+    font-size: 15px;
+    line-height: 26px;
+    padding: 5px;
+}
+
+.menubar ul li a:hover {
+    color: #F15D51;
+    transition: 0.4s ease;
+}
+
+/* || HERO CONTENT */
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-gap: 64px;
+    padding-bottom: 32px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+}
+
+.hero-img {
+    height: 300px;
+    
+}
+
+.hero-img img {
+    object-fit: cover;
+    height: 100%;
+}
+
+h1 {
+    color: #00001A;
+    font-weight: 800;
+    font-size: 2.5rem
+
+}
+
+.hero p {
+    line-height: 26px;
+    color: #5E607A;
+    padding-bottom: 24px;
+}
+
+.button {
+    background-color: #F15D51;
+    border: solid 1px #F15D51;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: #FFFDFA;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 13px 35px 11px 31px;
+    letter-spacing: 4.38px;
+    display: inline-block
+}
+
+.button:hover {
+    background-color: #FFFDFA;
+    color:#F15D51;
+    transition: 0.4s ease;
+}
+
+.new {
+    background-color: #00001A;
+    color:#FFFDFA;
+    padding: 24px 20px; 
+    position: relative;    
+}
+
+.new h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    padding-bottom: 35px;
+    color: #E9AA52;
+    text-decoration: solid 1px black;
+
+}
+
+.square {
+    border: solid 0.1rem #00001A;
+    height: 0.3rem;
+    width: 0.3rem;
+    position: absolute;
+    top: 2.7rem;
+    left: 2.9rem;
+}
+
+.new h4 {
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 24px;
+    padding-bottom: 8px;
+}
+
+.new p {
+    font-size: 1rem;
+    color: #C5C6CE;
+}
+
+.new hr {
+    margin: 30px 0px;
+    color:#5E607A;
+}
+
+/* || ARTICLE SECTION */
+
+.articles-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+    margin-bottom: 80px;
+}
+
+ .article {
+    max-height: 129px;
+}
+
+.article a {
+    max-width: 350px;
+    min-height: 129px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 24px;
+}
+
+    .test {
+   /*  height: inherit; */
+   height: 129px;
+}
+
+
+
+
+.article-intro {
+    grid-column-start: 2;
+}
+
+.article img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.Three {
+    /* border: solid 1px red; */
+    object-fit: cover;
+   /*height: inherit */
+}
+
+.article h3 {
+    color: #C5C6CE;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+
+.article h4 {
+    color: #00001A;
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 24px;
+    padding-bottom: 9px;
+}
+
+.article p {
+    color: #5E607A;
+    font-size: 15px;
+    font-weight:400;
+    line-height: 26px;
+}
+
+/* || MEDIA QUERIES */
+
+/* || SMALL */
+
+@media screen and (max-width: 612px) {
+
+    .menubar ul {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 612px) {
+    .burger-icon {
+        display: none;
+    }
+
+}
+
+/* || MEDIUM */
+
+@media screen and (min-width: 768px) {
+
+    .burger-icon {
+        display: none;
+    }
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 30px;
+        padding-bottom: 71px;
+        /* Garder la marges de 11% jusqu'à affichage mobile */
+        /*width: 77vw;
+        margin: 0 auto; */
+    }
+
+    .hero {
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .hero-img {
+        grid-column: 1/3;
+    }
+
+    .hero-text {
+        margin-right: 5px;
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 32px;
+        margin-bottom: 80px;
+        flex-flow: wrap;
+    }
+
+}
+
+
+/* || LARGE */
+
+@media screen and (min-width: 1110px) {
+
+    header, main, section {
+        margin-left: 165px;
+        margin-right: 165px;
+    }
+
+    .burger-icon {
+        display: none;
+    }
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 30px;
+        padding-bottom: 71px;
+        /* Garder la marges de 11% jusqu'à affichage mobile */
+        /*width: 77vw;
+        margin: 0 auto; */
+    }
+
+    .hero {
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .hero-img {
+        grid-column: 1/3;
+    }
+
+    .hero-text {
+        margin-right: 5px;
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 32px;
+        margin-bottom: 80px;
+        flex-flow: wrap;
+    }
+
+}
+
+/* ||  XL */
+
+@media screen and (min-width: px) {
+
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+
+}
